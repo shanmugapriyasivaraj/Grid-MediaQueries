@@ -1,0 +1,60 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  row-gap: 0.5rem;
+}
+@media (min-width: 400px) {
+  section {
+    grid-template-columns: 1fr, 2fr, 1fr;
+  }
+}
+@media (min-width: 500px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 600px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+div {
+  min-height: 20rem;
+
+  width: 20rem;
+  border: 4px solid black;
+  background: lightseagreen;
+
+  margin-bottom: 10px;
+}
+div:nth-child(1) {
+  background: lightseagreen;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4OGAJ8Wc9Y4wxIGd-Ffzm6H9jDABkyCwKeQ&usqp=CAU);
+  background-size: cover;
+}
+div:nth-child(2) {
+  background: pink;
+  background: url(http://static.indianexpress.com/m-images/M_Id_157942_news.jpg);
+  background-size: cover;
+}
+div:nth-child(3) {
+  background: lightgreen;
+  background: url(https://i.pinimg.com/originals/21/35/37/213537dbf9fc329f815d50112e445100.jpg);
+  background-size: cover;
+}
+div:nth-child(4) {
+  background: lightsalmon;
+  background: url(https://m.media-amazon.com/images/M/MV5BZTg1NDk4Y2UtZjE2Yy00ZTU3LWEyMDUtMDZkMTY3Y2E4NWZkXkEyXkFqcGdeQXVyODIwMDI1NjM@._V1_.jpg);
+  background-size: cover;
+}
+div:nth-child(5) {
+  background: lightyellow;
+  background: url(https://www.pinkvilla.com/imageresize/madhavan_3.jpg?width=752&format=webp&t=pvorg);
+  background-size: cover;
+}
+div:nth-child(6) {
+  background: lightblue;
+  background: url(https://pbs.twimg.com/media/CvEGOGuUAAAMchm.jpg);
+  background-size: cover;
+}
