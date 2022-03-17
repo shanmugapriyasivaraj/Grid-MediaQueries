@@ -8,8 +8,9 @@ section {
   section {
     /* grid-template-columns: 1fr, 2fr, 1fr; */
     grid-template-areas:
-      "one three two two"
-      "one four five six";
+      "three two one "
+      "four five one"
+      "six five one";
   }
 }
 @media (min-width: 900px) {
@@ -19,7 +20,7 @@ section {
 }
 @media (min-width: 600px) {
   section {
-    grid-template-columns: repeat(2, 1fr, 2fr);
+    grid-template-columns: repeat(2, 2fr);
   }
   div:nth-child(1) {
     grid-area: one;
