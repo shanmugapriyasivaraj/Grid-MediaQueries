@@ -21,9 +21,14 @@
 //   .then((newMsg) => console.log(newMsg))
 //   .catch((errMsg) => console.log(errMsg));
 
-console.log(
-  [1, 2, 3, 4]
-    .map((x) => x + 1)
-    .filter((x) => x > 3)
-    .map((y) => y * 2)
-);
+// console.log(
+//   [1, 2, 3, 4]
+//     .map((x) => x + 1)
+//     .filter((x) => x > 3)
+//     .map((y) => y * 2)
+// );
+
+fetch("https://restcountries.eu/rest/v2/all") //returns a promise
+  .then((data) => data.json())
+  .then((countries) => console.log(countries))
+  .catch((errMsg) => console.log(errMsg));
