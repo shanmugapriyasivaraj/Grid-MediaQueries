@@ -28,7 +28,47 @@
 //     .map((y) => y * 2)
 // );
 
-fetch("https://restcountries.eu/rest/v2/all") //returns a promise
-  .then((data) => data.json())
-  .then((countries) => console.log(countries))
-  .catch((errMsg) => console.log(errMsg));
+// fetch("https://restcountries.eu/rest/v2/all") //returns a promise
+//   .then((data) => data.json())
+//   .then((countries) => console.log(countries))
+//   .catch((errMsg) => console.log(errMsg));
+
+// callback hell
+
+let stocks = {
+  Fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
+  liquid: ["Water", "Ice"],
+  holder: ["Cone", "Cup", "Stick"],
+  toppings: ["Chocolate", "Peanuts"],
+};
+
+let order = (fruit_name, call_production) => {
+  setTimeout(() => {
+    console.log(`${stocks.Fruits[fruit_name]}was selected`);
+    call_production();
+  }, 2000);
+};
+let production = () => {
+  setTimeout(() => {
+    console.log("Production has started");
+    setTimeout(() => {
+      console.log("the fruit has been chopped");
+      setTimeout(() => {
+        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was addded`);
+        setTimeout(() => {
+          console.log(`The machine was started`);
+          setTimeout(() => {
+            console.log(`Icecream was placed on ${stocks.holder[0]}`);
+            setTimeout(() => {
+              console.log(`${stocks.toppings[0]} was added`);
+              setTimeout(() => {
+                console.log(`serve Icecream`);
+              }, 2000);
+            }, 3000);
+          }, 2000);
+        }, 1000);
+      }, 3000);
+    }, 2000);
+  }, 0000);
+};
+order(0, production);
